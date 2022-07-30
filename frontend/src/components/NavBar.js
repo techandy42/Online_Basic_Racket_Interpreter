@@ -23,10 +23,13 @@ export default function NavBar({ input, setOutputs, setResult }) {
     console.log(step)
     console.log('submitted...')
 
-    const result = await axios.post('http://localhost:5000/', {
-      input: input,
-      show_steps: step,
-    })
+    const result = await axios.post(
+      'https://racket-interpreter.herokuapp.com/',
+      {
+        input: input,
+        show_steps: step,
+      },
+    )
     setOutputs(result.data.outputs)
     setResult(result.data.result)
 

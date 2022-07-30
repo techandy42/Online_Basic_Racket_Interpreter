@@ -8,8 +8,8 @@
 
 > API Specification
 
-- url: `https://something.com`
-- body: `{ input: string, show_steps: boolean }`
+- url: `https://racket-interpreter.herokuapp.com/`
+- body (JSON): `{ "input": string, "show_steps": boolean }`
 
 > Features
 
