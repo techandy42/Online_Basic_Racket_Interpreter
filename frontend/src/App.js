@@ -1,7 +1,8 @@
 import { useState } from 'react'
 import NavBar from './components/NavBar'
 import EditorConsole from './components/EditorConsole'
-import Box from '@mui/material/Box'
+import Instructions from './components/Instructions'
+import { Box, Divider } from '@mui/material'
 
 export default function App() {
   const [input, setInput] = useState('')
@@ -12,6 +13,8 @@ export default function App() {
     <Box>
       <NavBar input={input} setOutputs={setOutputs} setResult={setResult} />
       <EditorConsole input={input} setInput={setInput} outputs={outputs} />
+      <Divider sx={{ marginBottom: 2 }} />
+      <Instructions />
     </Box>
   )
 }

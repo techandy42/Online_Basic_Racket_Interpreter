@@ -4,6 +4,8 @@
 
 - This is a basic Racket Interpreter built in 2 days for fun without looking at any Racket Interpreter source code, just from playing around with DrRacket.
 - This repo contains the source code for the React frontend and Flask backend of the my Online Basic Racket Interpreter website source code.
+- Frontend: React
+- Backend: Flask
 
 > Features
 
@@ -38,6 +40,8 @@
 - Only numeric and boolean types are supported.
 - Console output must be made by using the `'printf'` function.
 - The `'cond'` conditionals can be written with both `()` and `[]` notation.
+- There cannot be any duplicate definition names or parameter names that are already defined as definition names.
+- There can be numeric or boolean values in a `'cond'` without an operation block `()`.
 
 > Sample Code Blocks
 
