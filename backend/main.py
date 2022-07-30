@@ -1,14 +1,15 @@
-#!/usr/bin/env python
-# encoding: utf-8
 import json
 from flask import Flask, request, jsonify
+from flask_cors import CORS
 from Run import Run
 from config import outputs
 app = Flask(__name__)
+CORS(app)
 
 @app.route('/', methods=['GET'])
 def get_root():
-    return jsonify({'message': 'This is the Basic Racket Interpreter server.'})
+  response = jsonify({'message': 'This is the Basic Racket Interpreter server.'})
+  return response
 
 @app.route('/', methods=['POST'])
 def main():
@@ -17,6 +18,8 @@ def main():
   show_steps = data['show_steps']
   result = Run.run(input, show_steps)
 
-  return jsonify({'result': result, 'outputs': outputs})
+  response = jsonify({'result': result, 'outputs': outputs})
+  return response
 
-app.run()
+if __name__ == "__main__":
+  app.run(host='localhost', port=5000, debug=True)
