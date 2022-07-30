@@ -97,10 +97,10 @@ export default function InstructionsContent() {
             <Typography>(define x 10)</Typography>
             <Typography>(define y (* 2 3))</Typography>
             <br />
-            <Typography>(define (add-two a b)</Typography>
+            <Typography>(define (add_two a b)</Typography>
             <Typography>&nbsp;&nbsp;&nbsp;&nbsp;(+ a b))</Typography>
             <br />
-            <Typography>(printf (add-two x y))</Typography>
+            <Typography>(printf (add_two x y))</Typography>
           </ul>
         </CardContent>
       </Card>
